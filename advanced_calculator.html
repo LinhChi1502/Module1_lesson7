@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungMayTinh</title>
+</head>
+<body>
+<input type="text" id="so1" value="">
+<input type="text" id="so2" value="">
+
+    <button type="button" id = "cong" value="+" onclick="operation(this.id)">+</button>
+    <button type="button" id = "tru" value="-" onclick="operation(this.id)">-</button>
+    <button type="button" id = "nhan" value="*" onclick="operation(this.id)">*</button>
+    <button type="button" id = "chia" value="/" onclick="operation(this.id)">/</button>
+
+<input type="text" id="result" value="" disabled="true">
+<script>
+    function operation(clicked_id) {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let result;
+        switch (clicked_id) {
+            case "cong":
+                result = a + b;
+                break;
+            case "tru":
+                result = a - b;
+                break;
+            case "nhan":
+                result = a * b;
+                break;
+            case "chia":
+                result = a / b;s
+                break;
+        }
+        document.getElementById("result").value = result;
+    }
+
+</script>
+</body>
+
+</html>

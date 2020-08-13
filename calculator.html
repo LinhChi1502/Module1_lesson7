@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungMayTinh</title>
+</head>
+<body>
+<input type="text" id="so1" value="">
+<input type="text" id="so2" value="">
+
+<button type="button" id="cong" value="+" onclick="cong()">+</button>
+<button type="button" id="tru" value="-" onclick="tru()">-</button>
+<button type="button" id="nhan" value="*" onclick="nhan()">*</button>
+<button type="button" id="chia" value="/" onclick="chia()">/</button>
+
+<input type="text" id="result" value="" disabled="true">
+</body>
+<script>
+
+    function cong() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        result = a + b;
+        document.getElementById("result").value = result;
+    };
+    function tru() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        result = a - b;
+        document.getElementById("result").value = result;
+    };
+    function nhan() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        result = a * b;
+        document.getElementById("result").value = result;
+    };
+    function chia() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        result = a / b;
+        document.getElementById("result").value = result;
+    };
+</script>
+</html>

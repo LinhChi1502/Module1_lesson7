@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Convert</title>
+</head>
+<body>
+<form action="">
+    <h4>Amount</h4>
+    <input type="text" id="amountInput" value="1">
+    <h4>From currency</h4>
+    <select id="startCurrency">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+        <option value="Yen">Yen</option>
+    </select>
+    <h4>To Currency</h4>
+    <select id="resultCurrency">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+        <option value="Yen">Yen</option>
+    </select> <br>
+    <button id="Convert" type="button" onclick="convert()" value="">Convert</button>
+    <input type="text" value="" id="result" disabled="true">
+</form>
+<script>
+    function convert() {
+        let currency = {
+            'VND': {'USD': 0.000043, 'Yen': 0.0046},
+            'USD': {'VND': 23221.70, 'Yen': 106.01},
+            'Yen': {'VND': 219.06, 'USD': 0.0094}
+        };
+        let amount = parseInt(document.getElementById("amountInput").value);
+        let basecurrency = document.getElementById("startCurrency").value;
+        let tocurrency = document.getElementById("resultCurrency").value;
+        let result = currency[basecurrency][tocurrency] * amount;
+        document.getElementById("result").value = result;
+    }
+</script>
+</body>
+</html>
